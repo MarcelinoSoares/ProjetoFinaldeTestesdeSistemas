@@ -1,6 +1,6 @@
 package pages;
 
 public final class URL {
-    public static final String MAIN_PAGE = "";
+    public static final String MAIN_PAGE = "https://www.dafiti.com.br/";
 
 }
