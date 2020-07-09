@@ -18,7 +18,6 @@ public class DriverManager {
             Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
             driver = new ChromeDriver();
             driver.manage().window().maximize();
-            // driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         }
         return driver;
     }
