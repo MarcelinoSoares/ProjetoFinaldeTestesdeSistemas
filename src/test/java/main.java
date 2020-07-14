@@ -10,8 +10,8 @@ public class main {
     WebDriverWait wait = DriverManager.getDriverWait();
 
     @Test
-    public void testeAcessaraPagna(){
-        System.out.println("*** teste acesso a pagna***");
+    public void testeAcessaroSite(){
+        System.out.println("*** teste acesso o site***");
         MainPage mainPage = new MainPage(driver);
         mainPage.accessPage();
 
