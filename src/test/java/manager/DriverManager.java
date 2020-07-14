@@ -30,7 +30,7 @@ public class DriverManager {
         }
     }
 
-    public static WebDriverWait getWait() {
+    public static WebDriverWait getDriverWait() {
         if (wait == null) {
             wait = new WebDriverWait(getDriver(), 20);
         }
