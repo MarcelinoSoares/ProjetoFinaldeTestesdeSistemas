@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
 
 public class passosCenariosBruno {
 
-    WebDriver driver = DriverManager.getDriver();
+    private WebDriver driver = DriverManager.getDriver();
 
     @Dado("que um usuário acessa a página de Atendimento")
     public void acessarAPáginaDeAtendimento() {
@@ -25,9 +25,9 @@ public class passosCenariosBruno {
 
     @E("escolhe o atendimento Fale conosco por Mensagem")
     public void escolherOAtendimentoFaleConoscoPorMensagem() {
-        WebElement faleconosco = driver.findElement(By.cssSelector(".message-modal-content .message-email a"));
+        WebElement atendimentopormensagem = driver.findElement(By.cssSelector(".message-modal-content .message-email a"));
 
-        faleconosco.click();
+        atendimentopormensagem.click();
     }
 
     @E("seleciona o tópico de atendimento ‘Outros’")

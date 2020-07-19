@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 
 public class passosCenariosMarcelino {
 
-    WebDriver driver = DriverManager.getDriver();
+   private WebDriver driver = DriverManager.getDriver();
 
     @Dado("que o usuário acessa a página de um produto")
     public void acessarAPáginaDeUmProduto() {

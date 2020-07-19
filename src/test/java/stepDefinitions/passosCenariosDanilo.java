@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 
 public class passosCenariosDanilo {
 
-    WebDriver driver = DriverManager.getDriver();
+    private WebDriver driver = DriverManager.getDriver();
 
     @Dado("que um usuário está na página inicial")
     public void acessarAPáginaInicial() {
@@ -28,7 +28,7 @@ public class passosCenariosDanilo {
     }
 
     @Então("recebe a mensagem ‘Cadastro realizado com sucesso!”")
-    public void receberAMensagemCadastroRealizadoComSucesso() {
+    public void receberAMensagemCadastroRealizadoComSucesso() throws InterruptedException{
         Thread.sleep(1000);
         WebElement elemento_msgSucess = driver.findElement(By.cssSelector("#newsletter-confirmation-container .row .col-md-5 h4"));
         String msgE = "Cadastro efetuado com sucesso!";
@@ -57,7 +57,7 @@ public class passosCenariosDanilo {
     }
 
     @Então("o site exibe a mensagem ‘Insira um e-mail válido’")
-    public void exibirAMensagemInsiraUmEMailVálido() {
+    public void exibirAMensagemInsiraUmEMailVálido() throws InterruptedException{
         Thread.sleep(1000);
         WebElement elemento_msgInval = driver.findElement(By.cssSelector("#newsletter-confirmation-container .row .col-md-5"));
         String msgI = elemento_msgInval.getText();
