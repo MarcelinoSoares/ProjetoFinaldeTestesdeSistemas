@@ -13,7 +13,7 @@ public class DriverManager {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            System.setProperty("webdriver.chrome.driver", "C:\\Chrome driver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
             System.setProperty("webdriver.chrome.silentOutput", "true");
             Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
             driver = new ChromeDriver();
