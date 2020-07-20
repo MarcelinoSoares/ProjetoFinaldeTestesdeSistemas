@@ -34,8 +34,11 @@ public class passosCenariosMarcelino {
 
     @Dado("que o usuário possui um produto na sacola")
     public void possuirUmProdutoNaSacola() {
+     driver.get("https://www.dafiti.com.br/Mochila-Colcci-Matelasse-Preta-4802869.html");
+     WebElement Btncomprar = driver.findElement(By.cssSelector("#add-to-cart > button"));
      WebElement irnasacola = driver.findElement(By.cssSelector(".popover-go-to-cart-content > a"));
 
+     Btncomprar.click();
      irnasacola.click();
     }
 
@@ -56,10 +59,12 @@ public class passosCenariosMarcelino {
      WebElement selecionatamanho = driver.findElement(By.cssSelector("#add-to-cart > div.selectbox-2.add-to-cart-form-sizes > input[type=hidden]"));
      WebElement selecionanumero = driver.findElement(By.cssSelector("#add-to-cart > div.selectbox-2.add-to-cart-form-sizes.popover-click.is-open > ul > li:nth-child(6)"));
      WebElement Btncomprar = driver.findElement(By.cssSelector("#add-to-cart > button"));
+     WebElement irnasacola = driver.findElement(By.cssSelector(".popover-go-to-cart-content > a"));
 
      selecionatamanho.click();
      selecionanumero.click();
      Btncomprar.click();
+     irnasacola.click();
     }
 
     @Quando("clica em Embalagem para presente")
@@ -79,7 +84,12 @@ public class passosCenariosMarcelino {
 
     @Dado("que um usuário adiciona um produto na sacola")
     public void AdicionarUmProdutoNaSacola() {
+     driver.get("https://www.dafiti.com.br/Mesa-Escrivaninha-Self-Castanho-e-Branco-Appunto-4804356.html");
+     WebElement Btncomprar = driver.findElement(By.cssSelector("#add-to-cart > button"));
+     WebElement irnasacola = driver.findElement(By.cssSelector(".popover-go-to-cart-content > a"));
 
+     Btncomprar.click();
+     irnasacola.click();
     }
 
     @Quando("aumenta a quantidade para {int}")
