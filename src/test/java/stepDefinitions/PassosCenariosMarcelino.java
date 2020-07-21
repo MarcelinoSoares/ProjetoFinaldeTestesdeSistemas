@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class passosCenariosMarcelino {
+public class PassosCenariosMarcelino {
 
    private WebDriver driver = DriverManager.getDriver();
 
@@ -20,13 +20,13 @@ public class passosCenariosMarcelino {
 
     @Quando("clica em comprar")
     public void clicarEmBotaoComprar() {
-     WebElement Btncomprar = driver.findElement(By.cssSelector("#add-to-cart > button"));
+     WebElement btncomprar = driver.findElement(By.cssSelector("#add-to-cart > button"));
 
-     Btncomprar.click();
+     btncomprar.click();
     }
 
     @Então("o produto é adicionado na sacola")
-    public void IrNaSacola() {
+    public void irNaSacola() {
      WebElement irnasacola = driver.findElement(By.cssSelector(".popover-go-to-cart-content > a"));
 
      irnasacola.click();
@@ -35,18 +35,18 @@ public class passosCenariosMarcelino {
     @Dado("que o usuário possui um produto na sacola")
     public void possuirUmProdutoNaSacola() {
      driver.get("https://www.dafiti.com.br/Mochila-Colcci-Matelasse-Preta-4802869.html");
-     WebElement Btncomprar = driver.findElement(By.cssSelector("#add-to-cart > button"));
+     WebElement btncomprar = driver.findElement(By.cssSelector("#add-to-cart > button"));
      WebElement irnasacola = driver.findElement(By.cssSelector(".popover-go-to-cart-content > a"));
 
-     Btncomprar.click();
+     btncomprar.click();
      irnasacola.click();
     }
 
     @Quando("clica em ‘Remover produto’")
     public void clicarEmBotaoRemoverProduto() {
-     WebElement Btnremover = driver.findElement(By.cssSelector(".cart-product-action > a"));
+     WebElement btnremover = driver.findElement(By.cssSelector(".cart-product-action > a"));
 
-     Btnremover.click();
+     btnremover.click();
     }
 
     @Então("o produto é removido da sacola")
@@ -58,12 +58,12 @@ public class passosCenariosMarcelino {
      driver.get("https://www.dafiti.com.br/Tenis-adidas-Originals-Superstar-Slip-on-W-Preto-5125927.html");
      WebElement selecionatamanho = driver.findElement(By.cssSelector("#add-to-cart > div.selectbox-2.add-to-cart-form-sizes > input[type=hidden]"));
      WebElement selecionanumero = driver.findElement(By.cssSelector("#add-to-cart > div.selectbox-2.add-to-cart-form-sizes.popover-click.is-open > ul > li:nth-child(6)"));
-     WebElement Btncomprar = driver.findElement(By.cssSelector("#add-to-cart > button"));
+     WebElement btncomprar = driver.findElement(By.cssSelector("#add-to-cart > button"));
      WebElement irnasacola = driver.findElement(By.cssSelector(".popover-go-to-cart-content > a"));
 
      selecionatamanho.click();
      selecionanumero.click();
-     Btncomprar.click();
+     btncomprar.click();
      irnasacola.click();
     }
 
@@ -83,12 +83,12 @@ public class passosCenariosMarcelino {
     }
 
     @Dado("que um usuário adiciona um produto na sacola")
-    public void AdicionarUmProdutoNaSacola() {
+    public void adicionarUmProdutoNaSacola() {
      driver.get("https://www.dafiti.com.br/Mesa-Escrivaninha-Self-Castanho-e-Branco-Appunto-4804356.html");
-     WebElement Btncomprar = driver.findElement(By.cssSelector("#add-to-cart > button"));
+     WebElement btncomprar = driver.findElement(By.cssSelector("#add-to-cart > button"));
      WebElement irnasacola = driver.findElement(By.cssSelector(".popover-go-to-cart-content > a"));
 
-     Btncomprar.click();
+     btncomprar.click();
      irnasacola.click();
     }
 
