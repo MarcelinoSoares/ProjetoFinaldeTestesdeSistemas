@@ -1,7 +1,9 @@
 #language: pt
 
 Funcionalidade: Ajuda
+  // Descricao da funcionalidade
 
+  @ajuda
   Cenário: Enviar e-mail de suporte para outros assuntos.
     Dado que um usuário acessa a página de Atendimento
     E escolhe o atendimento Fale conosco por Mensagem
@@ -11,6 +13,7 @@ Funcionalidade: Ajuda
     Quando envia o formulário
     Então é exibida uma mensagem do envio com sucesso.
 
+    @ajuda
   Cenário: Obter informações de ajuda para cancelamento
     Dado que um usuário acessa a página de Atendimento
     E seleciona a opção de Dúvidas Frequentes
