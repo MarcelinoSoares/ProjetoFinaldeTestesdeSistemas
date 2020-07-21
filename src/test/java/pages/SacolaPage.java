@@ -3,14 +3,14 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.Comum;
+import Utils.Comum;
 
 public class SacolaPage {
 
     private WebDriver driver;
     private WebDriverWait wait;
     private String pageURL = "https://www.dafiti.com.br/";
-    private Comum acoesComuns;
+    private Comum  acoesComuns;
 
     private By btnComprar = By.cssSelector("#add-to-cart > button");
     private By btnIrParaSacola = By.cssSelector(".popover-go-to-cart-content > a");

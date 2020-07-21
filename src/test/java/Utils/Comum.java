@@ -4,7 +4,6 @@ import manager.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -21,7 +20,11 @@ public class Comum {
     public void irParaURL(String url){
         driver.get(url);
     }
-
+    public void sendKeys(By elemento, String texto) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(elemento));
+        driver.findElement(elemento).clear();
+        driver.findElement(elemento).sendKeys(texto);
+    }
     public void clicar(By elemento) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(elemento));
         driver.findElement(elemento).click();
