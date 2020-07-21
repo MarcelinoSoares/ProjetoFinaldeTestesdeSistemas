@@ -2,7 +2,7 @@
 
 Funcionalidade: Sacola
 
-  @sacola
+  @sacola @run
   Cenário: adicionar produto à sacola
     Dado que o usuário acessa a página de um produto
     Quando clica em comprar

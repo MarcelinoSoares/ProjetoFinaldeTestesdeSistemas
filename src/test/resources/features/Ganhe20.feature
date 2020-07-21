@@ -12,7 +12,7 @@ Funcionalidade: Ganhe20 na primeira compra
   Cenário: Gerando cupom para primeira compra moda Masculina
     Dado que um usuário está na página inicial
     Quando preenche o email para ganhar o cupom ganhe20 masculino
-    Então recebe a mensagem ‘Cadastro realizado com sucesso!”
+    Então recebe a mensagem ‘Cadastro realizado com sucesso!'
 
     @ganhe20
   Cenário:  Email inválido
