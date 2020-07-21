@@ -46,7 +46,7 @@ public class Ganhe20 {
 
     @Então("o site exibe a mensagem ‘Insira um e-mail válido’")
     public void exibirAMensagemInsiraUmEMailVálido() throws InterruptedException{
-        Thread.sleep(1000);
+
 
 
     }
