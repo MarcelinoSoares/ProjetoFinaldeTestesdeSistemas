@@ -30,7 +30,8 @@ public class Ganhe20 {
     public void receberAMensagemCadastroRealizadoComSucesso() throws InterruptedException{
         Thread.sleep(1000);
 
-
+        String mensagemAtual = pageGanhe20.getmsgsucess();
+        Assert.assertEquals("O cadastro não foi realizado com sucesso","Cadastro efetuado com sucesso!", mensagemAtual);
     }
 
     @Quando("preenche o email para ganhar o cupom ganhe{int} masculino")
@@ -46,9 +47,10 @@ public class Ganhe20 {
 
     @Então("o site exibe a mensagem ‘Insira um e-mail válido’")
     public void exibirAMensagemInsiraUmEMailVálido() throws InterruptedException{
+        Thread.sleep(1000);
 
-
-
+        String mensagemAtual = pageGanhe20.getmsginval();
+        Assert.assertEquals("O email não foi validado com sucesso","Insira um e-mail válido", mensagemAtual);
     }
 
     @Quando("insere um email que já foi utilizado para receber cupom ganhe{int}")
