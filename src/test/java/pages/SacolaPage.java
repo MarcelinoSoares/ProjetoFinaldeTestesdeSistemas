@@ -18,7 +18,8 @@ public class SacolaPage {
     private By inputTamanho = By.cssSelector("#add-to-cart > div.selectbox-2.add-to-cart-form-sizes > input[type=hidden]");
     private By optTamanho = By.cssSelector("#add-to-cart > div.selectbox-2.add-to-cart-form-sizes.popover-click.is-open > ul > li:nth-child(6)");
     private By aProdutoNaSacola = By.xpath("//p[@class='cart-product-name']//a[contains(text(),'Tapete')]");
-    private By embalagemparapresente = By.cssSelector("#cart_product_gift_AD464SCF72QTB-58");
+    private By embalagemParaPresente = By.cssSelector("#cart_product_gift_AD464SCF72QTB-58");
+    private By h3sacolaVazia = By.xpath("//h3[@class='cart-empty-title']");
 
     private String produtoURLtapete = "https://www.dafiti.com.br/Tapete-Felpudo-Classic-Casa-Dona-Bege-100cm-x-150cm-5671829.html";
     private String produtoURLmochila = "https://www.dafiti.com.br/Mochila-Colcci-Matelasse-Preta-4802869.html";
@@ -40,7 +41,7 @@ public class SacolaPage {
     }
 
     public void clicarbtnComprar(){
-        acoesComuns.clicar(btnComprar);
+        acoesComuns.clicarClicavel(btnComprar);
     }
     public void clicarbtnIrParaSacola(){
         acoesComuns.clicar(btnIrParaSacola);
@@ -48,16 +49,21 @@ public class SacolaPage {
     public void clicarbtnRemover(){
         acoesComuns.clicar(btnRemover);
     }
-    public void clicarinputTamanho(){
+    public void clicarInputTamanho(){
         acoesComuns.clicar(inputTamanho);
     }
-    public void clicaropttamanho(){
+    public void clicarOptTamanho(){
         acoesComuns.clicar(optTamanho);
     }
-    public void clicarembalagemparapresente(){
-        acoesComuns.clicar(embalagemparapresente);
+    public void clicarEmbalagemParaPresente(){
+        acoesComuns.clicar(embalagemParaPresente);
     }
     public String getProdutoNaSacola(){
         return acoesComuns.getElementText(aProdutoNaSacola);
     }
+
+    public String getSacolaVazia(){
+        return acoesComuns.getElementText(h3sacolaVazia);
+    }
+
 }
