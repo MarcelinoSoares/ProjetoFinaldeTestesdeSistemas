@@ -57,7 +57,7 @@ public class Ganhe20 {
 
     @Então("o site exibe a mensagem ‘Este e-mail já está cadastrado’")
     public void exibirAMensagemEsteEMailJáEstáCadastrado() {
-        String mensagemAtualJaCadastrada = pageGanhe20.getmsginval();
+        String mensagemAtualJaCadastrada = pageGanhe20.getmsgemailjacadastrado();
         Assert.assertEquals("O email não está cadastrado" , "Caso não tenha recebido nossos emails, verifique sua caixa de SPAM ou lixo eletrônico.", mensagemAtualJaCadastrada);
     }
 }

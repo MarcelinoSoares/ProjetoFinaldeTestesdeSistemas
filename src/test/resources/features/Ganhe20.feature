@@ -2,7 +2,7 @@
 
 Funcionalidade: Ganhe20 na primeira compra
 
-  @ganhe20
+  @ganhe20 @run
   Cenário: Gerando cupom para primeira compra moda feminina
     Dado que um usuário está na página inicial
     Quando preenche o email para ganhar o cupom ganhe20 feminino

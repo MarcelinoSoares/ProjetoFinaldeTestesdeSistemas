@@ -58,7 +58,7 @@ public class Ganhe20Page {
 
     public String getmsgemailjacadastrado(){
 
-        return acoesComuns.getElementText(getmsgemailjacadastrado);
+        return acoesComuns.getElementText(elemento_msgEmailJaCadastrado);
     }
 
 }
