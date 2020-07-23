@@ -55,10 +55,10 @@ public class Ajuda {
     public void exibirUmaMensagemDoEnvioComSucesso() {
         pageAjuda.gettitle();
         String mensagemAtualsucess = pageAjuda.gettitle();
-        Assert.assertEquals("O cadastro não foi realizado com sucesso", "Cadastro efetuado com sucesso!", mensagemAtualsucess);
+        Assert.assertEquals("A mensagem não foi enviada com sucesso", "Mensagem enviada com sucesso!", mensagemAtualsucess);
         pageAjuda.getsubtitle();
         String mensagemAtualsucess2 = pageAjuda.getsubtitle();
-        Assert.assertEquals("O cadastro não foi realizado com sucesso", "Cadastro efetuado com sucesso!", mensagemAtualsucess2);
+        Assert.assertEquals("A mensagem não foi enviada com sucesso", "Mensagem enviada com sucesso!", mensagemAtualsucess2);
     }
 
     @E("seleciona a opção de Dúvidas Frequentes")
