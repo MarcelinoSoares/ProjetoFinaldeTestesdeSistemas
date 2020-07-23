@@ -27,11 +27,9 @@ public class Ganhe20 {
     }
 
     @Então("recebe a mensagem ‘Cadastro realizado com sucesso!”")
-    public void receberAMensagemCadastroRealizadoComSucesso() throws InterruptedException{
-        Thread.sleep(1000);
-
-        String mensagemAtual = pageGanhe20.getmsgsucess();
-        Assert.assertEquals("O cadastro não foi realizado com sucesso","Cadastro efetuado com sucesso!", mensagemAtual);
+    public void receberAMensagemCadastroRealizadoComSucesso() {
+        String mensagemAtualsucess = pageGanhe20.getmsgsucess();
+        Assert.assertEquals("O cadastro não foi realizado com sucesso", "Cadastro efetuado com sucesso!", mensagemAtualsucess);
     }
 
     @Quando("preenche o email para ganhar o cupom ganhe{int} masculino")
@@ -46,11 +44,9 @@ public class Ganhe20 {
     }
 
     @Então("o site exibe a mensagem ‘Insira um e-mail válido’")
-    public void exibirAMensagemInsiraUmEMailVálido() throws InterruptedException{
-        Thread.sleep(1000);
-
+    public void exibirAMensagemInsiraUmEMailVálido() {
         String mensagemAtual = pageGanhe20.getmsginval();
-        Assert.assertEquals("O email não foi validado com sucesso","Insira um e-mail válido", mensagemAtual);
+        Assert.assertEquals("O email não foi validado com sucesso", "Insira um e-mail válido", mensagemAtual);
     }
 
     @Quando("insere um email que já foi utilizado para receber cupom ganhe{int}")
@@ -61,6 +57,7 @@ public class Ganhe20 {
 
     @Então("o site exibe a mensagem ‘Este e-mail já está cadastrado’")
     public void exibirAMensagemEsteEMailJáEstáCadastrado() {
-
+        String mensagemAtualJaCadastrada = pageGanhe20.getmsginval();
+        Assert.assertEquals("O email não está cadastrado" , "Caso não tenha recebido nossos emails, verifique sua caixa de SPAM ou lixo eletrônico.", mensagemAtualJaCadastrada);
     }
 }
