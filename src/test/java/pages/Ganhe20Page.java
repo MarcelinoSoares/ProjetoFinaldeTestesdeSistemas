@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import Utils.Comum;
 
@@ -24,6 +25,10 @@ public class Ganhe20Page {
     public Ganhe20Page(WebDriver driver){
         this.driver = driver;
         acoesComuns = new Comum(driver);
+    }
+
+    public msgEmailInvalido(){
+        this.wait.until(ExpectedCondition.presenceOfElementLocated())
     }
 
     public void irParaURL(){
