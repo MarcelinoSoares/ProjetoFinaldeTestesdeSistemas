@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import Utils.Comum;
 
@@ -21,14 +20,12 @@ public class Ganhe20Page {
     private By elemento_sexMas = By.cssSelector("#newsletter-container .col-md-8 .newsletter-form #newsletterValidateDetail .row .col-md-3:nth-child(6) button");
     private By elemento_email_invalido = By.cssSelector("#newsletter-container .col-md-8 .newsletter-form #newsletterValidateDetail .row .col-md-6 .box-input-email input");
     private By elemento_msgInval = By.cssSelector("#newsletter-confirmation-container .row .col-md-5");
+    private By elemento_msgEmailJaCadastrado = By.cssSelector("#newsletter-container > div > div.col-md-8 > div > div > div > p");
+
 
     public Ganhe20Page(WebDriver driver){
         this.driver = driver;
         acoesComuns = new Comum(driver);
-    }
-
-    public msgEmailInvalido(){
-        this.wait.until(ExpectedCondition.presenceOfElementLocated())
     }
 
     public void irParaURL(){
@@ -55,6 +52,13 @@ public class Ganhe20Page {
         return acoesComuns.getElementText(elemento_msgSucess);
     }
     public String getmsginval(){
+
         return acoesComuns.getElementText(elemento_msgInval);
     }
+
+    public String getmsgemailjacadastrado(){
+
+        return acoesComuns.getElementText(getmsgemailjacadastrado);
+    }
+
 }
