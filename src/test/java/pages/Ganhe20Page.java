@@ -2,6 +2,9 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import Utils.Comum;
 
@@ -20,6 +23,8 @@ public class Ganhe20Page {
     private By elemento_sexMas = By.cssSelector("#newsletter-container .col-md-8 .newsletter-form #newsletterValidateDetail .row .col-md-3:nth-child(6) button");
     private By elemento_email_invalido = By.cssSelector("#newsletter-container .col-md-8 .newsletter-form #newsletterValidateDetail .row .col-md-6 .box-input-email input");
     private By elemento_msgInval = By.cssSelector("#newsletter-confirmation-container .row .col-md-5");
+    private By elemento_msgEmailJaCadastrado = By.cssSelector("#newsletter-container > div > div.col-md-8 > div > div > div > p");
+
 
     public Ganhe20Page(WebDriver driver){
         this.driver = driver;
@@ -31,13 +36,13 @@ public class Ganhe20Page {
     }
 
     public void sendkeyemailfem() {
-        acoesComuns.sendKeys(elemento_email_feminino, "mulher@fem.com");
+        acoesComuns.sendKeys(elemento_email_feminino, "mulher7@femiappp.com");
     }
     public void clicarbtnsexfem(){
         acoesComuns.clicar(elemento_sexFem);
     }
     public void sendkeyemailmas(){
-        acoesComuns.sendKeys( elemento_email_masculino, "homem@mas.com");
+        acoesComuns.sendKeys( elemento_email_masculino, "homem18@masculippp.com");
     }
     public void clicarbtnsexmas(){
         acoesComuns.clicar(elemento_sexMas);
@@ -47,9 +52,16 @@ public class Ganhe20Page {
     }
 
     public String getmsgsucess(){
+        acoesComuns.clicar(elemento_msgSucess);
         return acoesComuns.getElementText(elemento_msgSucess);
     }
     public String getmsginval(){
+        acoesComuns.clicar(elemento_msgInval);
         return acoesComuns.getElementText(elemento_msgInval);
+    }
+
+    public String getmsgemailjacadastrado(){
+        acoesComuns.clicar(elemento_msgEmailJaCadastrado);
+        return acoesComuns.getElementText(elemento_msgEmailJaCadastrado);
     }
 }

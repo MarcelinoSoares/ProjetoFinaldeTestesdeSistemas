@@ -15,8 +15,8 @@ public class AjudaPage {
 
     private By linkatendimento = By.cssSelector(".footer-help  ul  li:nth-child(2)  a");
     private By atendimentopormensagem = By.cssSelector(".message-modal-content .message-email a");
-    private By topicooutro = By.cssSelector("#topic_other");
-    private By assuntodamensagem = By.cssSelector("#topic_other_problem_3");
+    private By topicooutro = By.cssSelector("#topic_other label");
+    private By assuntodamensagem = By.id("topic_other_problem_3");
     private By nome = By.cssSelector("#name");
     private By idenficador = By.cssSelector("#taxIdentification");
     private By email = By.cssSelector("#email");
@@ -26,6 +26,10 @@ public class AjudaPage {
     private By btnEnviar = By.cssSelector("#form-faq-contact  .col-xs-6:last-child .btn-primary");
     private By title = By.cssSelector(".emailSent-message .emailSent-title");
     private By subtitle = By.cssSelector(".emailSent-message .emailSent-subtitle");
+    private By duvidaFrequentes = By.cssSelector(".footer-help ul li:nth-child(1) a");
+    private By opcaoCancelamento = By.cssSelector("#ajax-cancelamentos > a");
+    private By comoCancelar = By.cssSelector("#item-selected-103-1 > div > h2");
+    private By textCancelamento = By.cssSelector("#item-selected-103-1 > div > div > p");
 
     public AjudaPage(WebDriver driver){
         this.driver = driver;
@@ -74,5 +78,17 @@ public class AjudaPage {
     }
     public String getsubtitle(){
         return acoesComuns.getElementText(subtitle);
+    }
+    public void clicarlinkfaq() {
+        acoesComuns.clicar(duvidaFrequentes);
+    }
+    public void clicarbtncancelamento(){
+        acoesComuns.clicar(opcaoCancelamento);
+    }
+    public void comocancelacompra(){
+        acoesComuns.clicar(comoCancelar);
+    }
+    public String gettextcancelamento(){
+        return acoesComuns.getElementText(textCancelamento);
     }
 }
