@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.MainPage;
 
-public class main {
+public class Main {
 
     WebDriver driver = DriverManager.getDriver();
     WebDriverWait wait = DriverManager.getDriverWait();
