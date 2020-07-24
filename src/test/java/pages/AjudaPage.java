@@ -26,11 +26,15 @@ public class AjudaPage {
     private By btnEnviar = By.cssSelector("#form-faq-contact  .col-xs-6:last-child .btn-primary");
     private By title = By.cssSelector(".emailSent-message .emailSent-title");
     private By subtitle = By.cssSelector(".emailSent-message .emailSent-subtitle");
+    //cenario02
     private By duvidaFrequentes = By.cssSelector(".footer-help ul li:nth-child(1) a");
     private By opcaoCancelamento = By.cssSelector("#ajax-cancelamentos > a");
     private By comoCancelar = By.cssSelector("#item-selected-103-1 > div > h2");
     private By textCancelamento = By.cssSelector("#item-selected-103-1 > div > div > p");
-
+    //cenario03
+    private By opcaoComoComprar = By.cssSelector("#ajax-como-comprar > a");
+    private By comoRecuperarSenha = By.cssSelector("#item-selected-100-1 > div > h2");
+    private By textComoRecuperarSenha = By.cssSelector("#item-selected-100-1 > div > div > p");
     public AjudaPage(WebDriver driver){
         this.driver = driver;
         acoesComuns = new Comum(driver);
@@ -79,9 +83,11 @@ public class AjudaPage {
     public String getsubtitle(){
         return acoesComuns.getElementText(subtitle);
     }
+    //cenario 02
     public void clicarlinkfaq() {
         acoesComuns.clicar(duvidaFrequentes);
     }
+
     public void clicarbtncancelamento(){
         acoesComuns.clicar(opcaoCancelamento);
     }
@@ -90,5 +96,16 @@ public class AjudaPage {
     }
     public String gettextcancelamento(){
         return acoesComuns.getElementText(textCancelamento);
+    }
+
+    //cenario 03
+    public void clicarbtncomocomprar(){
+        acoesComuns.clicar(opcaoComoComprar);
+    }
+    public void clicarcomorecuperarsenha(){
+        acoesComuns.clicar(comoRecuperarSenha);
+    }
+    public String gettextcomocecuperarcenha(){
+        return acoesComuns.getElementText(textComoRecuperarSenha);
     }
 }
