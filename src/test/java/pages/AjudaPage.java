@@ -83,7 +83,7 @@ public class AjudaPage {
     public String getsubtitle(){
         return acoesComuns.getElementText(subtitle);
     }
-    //cenario 02
+    //cenario 02 cancelamento
     public void clicarlinkfaq() {
         acoesComuns.clicar(duvidaFrequentes);
     }
@@ -98,7 +98,7 @@ public class AjudaPage {
         return acoesComuns.getElementText(textCancelamento);
     }
 
-    //cenario 03
+    //cenario 03 senha
     public void clicarbtncomocomprar(){
         acoesComuns.clicar(opcaoComoComprar);
     }
