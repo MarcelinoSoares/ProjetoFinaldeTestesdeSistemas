@@ -14,7 +14,7 @@ Funcionalidade: Ganhe20 na primeira compra
     Quando preenche o email para ganhar o cupom ganhe20 masculino
     Então recebe a mensagem ‘Cadastro realizado com sucesso!'
 
-    @ganhe20 @run
+    @ganhe20 
   Cenário:  Email inválido
     Dado que um usuário está na página inicial
     Quando insere um email inválido para receber cupom ganhe20

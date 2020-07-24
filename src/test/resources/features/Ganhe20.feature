@@ -20,7 +20,7 @@ Funcionalidade: Ganhe20 na primeira compra
     Quando insere um email inválido para receber cupom ganhe20
     Então o site exibe a mensagem ‘Insira um e-mail válido’
 
-    @ganhe20 @run
+    @ganhe20
   Cenário:  Email já utilizado
     Dado que um usuário está na página inicial
     Quando insere um email que já foi utilizado para receber cupom ganhe20

@@ -58,19 +58,26 @@ public class Ajuda {
 
     }
 
-    @E("seleciona a opção de Dúvidas Frequentes")
+    @Dado("que um usuário seleciona a opção de Dúvidas Frequentes")
     public void selecionarAOpçãoDeDúvidasFrequentes() {
+        pageAjuda.irParaURL();
+        pageAjuda.clicarlinkfaq();
     }
 
-    @E("escolhe a opção de Cancelamentos")
+    @Quando("escolhe a opção de Cancelamentos")
     public void escolherAOpçãoDeCancelamentos() {
+        pageAjuda.clicarbtncancelamento();
     }
 
-    @Quando("escolhe a opção Como faço para cancelar minha compra")
+    @E("escolhe a opção Como faço para cancelar minha compra")
     public void escolherAOpçãoComoFaçoParaCancelarMinhaCompra() {
+        pageAjuda.comocancelacompra();
     }
 
     @Então("é exibido o texto esperado de ajuda para cancelamento")
     public void exibirOTextoEsperadoDeAjudaParaCancelamento() {
+        pageAjuda.gettextcancelamento();
+        String mensagemAtual = pageAjuda.gettextcancelamento();
+        Assert.assertEquals("Mensagem incorreta", "Se a forma de pagamento escolhida foi o boleto bancário e o pagamento ainda não foi efetuado, o pedido será cancelado automaticamente no dia seguinte ao vencimento do boleto, sem ônus para você. Se efetuou o pagamento com cartão de crédito e a Nota Fiscal não tiver sido emitida, poderá solicitar o cancelamento ao entrar em contato com nossa Central de Relacionamento.", mensagemAtual);
     }
 }

@@ -13,10 +13,9 @@ Funcionalidade: Ajuda
     Quando envia o formulário
     Então é exibida uma mensagem do envio com sucesso.
 
-    @ajuda
+    @ajuda @run
   Cenário: Obter informações de ajuda para cancelamento
-    Dado que um usuário acessa a página de Atendimento
-    E seleciona a opção de Dúvidas Frequentes
-    E escolhe a opção de Cancelamentos
-    Quando escolhe a opção Como faço para cancelar minha compra
+    Dado que um usuário seleciona a opção de Dúvidas Frequentes
+    Quando escolhe a opção de Cancelamentos
+    E escolhe a opção Como faço para cancelar minha compra
     Então é exibido o texto esperado de ajuda para cancelamento
