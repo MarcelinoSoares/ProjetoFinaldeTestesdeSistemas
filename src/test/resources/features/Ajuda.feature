@@ -20,9 +20,16 @@ Funcionalidade: Ajuda
     E escolhe a opção Como faço para cancelar minha compra
     Então é exibido o texto esperado de ajuda para cancelamento
 
-  @ajuda @run
+  @ajuda
   Cenário: Obter informações de ajuda para Recuperar sua senha
     Dado que um usuário seleciona a opção de FAQ
     Quando escolhe a opção de Como Comprar
     E escolhe a opção Como faço para recuperar minha senha
     Então é exibido o texto esperado de ajuda para recuperar senha
+
+  @ajuda @run
+  Cenário: Obter informações de ajuda para Entregas no mesmo dia
+    Dado que um usuário seleciona a opção de ajuda por perguntas e respostas
+    Quando escolhe a opção de Entregas e Frete
+    E escolhe a opção O que é o frete hoje
+    Então é exibido o texto esperado de ajuda sobre o que é o frete hoje

@@ -35,6 +35,11 @@ public class AjudaPage {
     private By opcaoComoComprar = By.cssSelector("#ajax-como-comprar > a");
     private By comoRecuperarSenha = By.cssSelector("#item-selected-100-1 > div > h2");
     private By textComoRecuperarSenha = By.cssSelector("#item-selected-100-1 > div > div > p");
+    //cenario04
+    private By opcaoEntregas = By.cssSelector("#ajax-pedidos > a");
+    private By freteHoje = By.cssSelector("#item-selected-104-7 > div > h2");
+    private By textFreteHoje = By.cssSelector("#item-selected-104-7 > div > div > p");
+
     public AjudaPage(WebDriver driver){
         this.driver = driver;
         acoesComuns = new Comum(driver);
@@ -108,4 +113,16 @@ public class AjudaPage {
     public String gettextcomocecuperarcenha(){
         return acoesComuns.getElementText(textComoRecuperarSenha);
     }
+
+    //cenario 04 Frete Hoje
+    public void clicarbtnentregas(){
+        acoesComuns.clicar(opcaoEntregas);
+    }
+    public void clicarfretehoje(){
+        acoesComuns.clicar(freteHoje);
+    }
+    public String gettextfretehoje(){
+        return acoesComuns.getElementText(textFreteHoje);
+    }
+
 }
