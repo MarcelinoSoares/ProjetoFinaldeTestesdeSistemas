@@ -1,7 +1,7 @@
 #language: pt
 
 Funcionalidade: Ajuda
-  // Descricao da funcionalidade
+  //Descricao da funcionalidade
 
   @ajuda
   Cenário: Enviar e-mail de suporte para outros assuntos.
