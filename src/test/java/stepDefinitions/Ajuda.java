@@ -14,7 +14,7 @@ public class Ajuda {
 
     private WebDriver driver = DriverManager.getDriver();
     private AjudaPage pageAjuda = new AjudaPage(driver);
-
+    //Cenário 01
     @Dado("que um usuário acessa a página de Atendimento")
     public void acessarAPáginaDeAtendimento() {
         pageAjuda.irParaURL();
@@ -58,6 +58,7 @@ public class Ajuda {
 
     }
 
+    //Cenário 02
     @Dado("que um usuário seleciona a opção de Dúvidas Frequentes")
     public void selecionarAOpçãoDeDúvidasFrequentes() {
         pageAjuda.irParaURL();
@@ -80,4 +81,31 @@ public class Ajuda {
         String mensagemAtual = pageAjuda.gettextcancelamento();
         Assert.assertEquals("Mensagem incorreta", "Se a forma de pagamento escolhida foi o boleto bancário e o pagamento ainda não foi efetuado, o pedido será cancelado automaticamente no dia seguinte ao vencimento do boleto, sem ônus para você. Se efetuou o pagamento com cartão de crédito e a Nota Fiscal não tiver sido emitida, poderá solicitar o cancelamento ao entrar em contato com nossa Central de Relacionamento.", mensagemAtual);
     }
+
+    //Cenário 03
+    @Dado("que um usuário seleciona a opção de FAQ")
+    public void selecionarAOpçãoFAQ() {
+        pageAjuda.irParaURL();
+        pageAjuda.clicarlinkfaq();
+    }
+
+    @Quando("escolhe a opção de Como Comprar")
+    public void escolherAOpçãoDeComoComprar() {
+        pageAjuda.clicarbtncomocomprar();
+    }
+
+    @E("escolhe a opção Como faço para recuperar minha senha")
+    public void escolherAOpçãoComoParaRecuperarSenha() {
+        pageAjuda.clicarcomorecuperarsenha();
+    }
+
+    @Então("é exibido o texto esperado de ajuda para recuperar senha")
+    public void exibirOTextoEsperadoDeAjudaParaRecuperarSenha() {
+        pageAjuda.gettextcomocecuperarcenha();
+        String mensagemAtual = pageAjuda.gettextcomocecuperarcenha();
+        Assert.assertEquals("Mensagem incorreta", "Esqueceu sua senha? Isso acontece! Para recuperá-la, clique em \"Entrar\" e depois em \"Esqueceu a senha?\", em seguida coloque seu e-mail, CPF ou CNPJ e enviaremos o passo a passo para criar uma nova no e-mail cadastrado.", mensagemAtual);
+    }
+
+
+
 }
