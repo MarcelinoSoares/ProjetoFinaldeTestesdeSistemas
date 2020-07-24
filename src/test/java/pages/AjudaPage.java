@@ -114,7 +114,7 @@ public class AjudaPage {
         return acoesComuns.getElementText(textComoRecuperarSenha);
     }
 
-    //cenario 04 Frete Hoje
+    //cenario 04 Frete Hoje.
     public void clicarbtnentregas(){
         acoesComuns.clicar(opcaoEntregas);
     }

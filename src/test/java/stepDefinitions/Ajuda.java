@@ -106,7 +106,7 @@ public class Ajuda {
         Assert.assertEquals("Mensagem incorreta", "Esqueceu sua senha? Isso acontece! Para recuperá-la, clique em \"Entrar\" e depois em \"Esqueceu a senha?\", em seguida coloque seu e-mail, CPF ou CNPJ e enviaremos o passo a passo para criar uma nova no e-mail cadastrado.", mensagemAtual);
     }
 
-    //Cenário 04 Frete Hoje
+    //Cenário 04 Frete Hoje.
     @Dado("que um usuário seleciona a opção de ajuda por perguntas e respostas")
     public void selecionarPerguntasRespostas() {
         pageAjuda.irParaURL();
