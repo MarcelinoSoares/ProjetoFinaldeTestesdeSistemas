@@ -21,8 +21,8 @@ public class Ganhe20 {
       pageGanhe20.irParaURL();
     }
 
-    @Quando("preenche o email para ganhar o cupom ganhe{int} feminino")
-    public void preencherOEmailParaGanharOCupomGanheFeminino(int arg0) {
+    @Quando("preenche o email para ganhar o cupom ganheVinte feminino")
+    public void preencherOEmailParaGanharOCupomGanheFeminino() {
         pageGanhe20.sendkeyemailfem();
         pageGanhe20.clicarbtnsexfem();
     }
@@ -34,14 +34,14 @@ public class Ganhe20 {
         DriverManager.endSession();
     }
 
-    @Quando("preenche o email para ganhar o cupom ganhe{int} masculino")
-    public void preencherOEmailParaGanharOCupomGanheMasculino(int arg0) {
+    @Quando("preenche o email para ganhar o cupom ganheVinte masculino")
+    public void preencherOEmailParaGanharOCupomGanheMasculino() {
         pageGanhe20.sendkeyemailmas();
         pageGanhe20.clicarbtnsexmas();
     }
 
-    @Quando("insere um email inválido para receber cupom ganhe{int}")
-    public void inserirUmEmailInválidoParaReceberCupomGanhe(int arg0) {
+    @Quando("insere um email inválido para receber cupom ganheVinte")
+    public void inserirUmEmailInválidoParaReceberCupomGanhe() {
         pageGanhe20.sendkeyemailinvalido();
         pageGanhe20.clicarbtnsexmas();
     }
@@ -53,8 +53,8 @@ public class Ganhe20 {
         DriverManager.endSession();
     }
 
-    @Quando("insere um email que já foi utilizado para receber cupom ganhe{int}")
-    public void inserirUmEmailQueJáFoiUtilizadoParaReceberCupomGanhe(int arg0) {
+    @Quando("insere um email que já foi utilizado para receber cupom ganheVinte")
+    public void inserirUmEmailQueJáFoiUtilizadoParaReceberCupomGanhe() {
         pageGanhe20.sendkeyemailfem();
         pageGanhe20.clicarbtnsexfem();
     }
