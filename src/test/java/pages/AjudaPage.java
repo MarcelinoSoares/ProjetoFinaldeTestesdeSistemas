@@ -26,10 +26,19 @@ public class AjudaPage {
     private By btnEnviar = By.cssSelector("#form-faq-contact  .col-xs-6:last-child .btn-primary");
     private By title = By.cssSelector(".emailSent-message .emailSent-title");
     private By subtitle = By.cssSelector(".emailSent-message .emailSent-subtitle");
+    //cenario02
     private By duvidaFrequentes = By.cssSelector(".footer-help ul li:nth-child(1) a");
     private By opcaoCancelamento = By.cssSelector("#ajax-cancelamentos > a");
     private By comoCancelar = By.cssSelector("#item-selected-103-1 > div > h2");
     private By textCancelamento = By.cssSelector("#item-selected-103-1 > div > div > p");
+    //cenario03
+    private By opcaoComoComprar = By.cssSelector("#ajax-como-comprar > a");
+    private By comoRecuperarSenha = By.cssSelector("#item-selected-100-1 > div > h2");
+    private By textComoRecuperarSenha = By.cssSelector("#item-selected-100-1 > div > div > p");
+    //cenario04
+    private By opcaoEntregas = By.cssSelector("#ajax-pedidos > a");
+    private By freteHoje = By.cssSelector("#item-selected-104-7 > div > h2");
+    private By textFreteHoje = By.cssSelector("#item-selected-104-7 > div > div > p");
 
     public AjudaPage(WebDriver driver){
         this.driver = driver;
@@ -79,6 +88,7 @@ public class AjudaPage {
     public String getsubtitle(){
         return acoesComuns.getElementText(subtitle);
     }
+    //cenario 02 cancelamento
     public void clicarlinkfaq() {
         acoesComuns.clicar(duvidaFrequentes);
     }
@@ -91,4 +101,27 @@ public class AjudaPage {
     public String gettextcancelamento(){
         return acoesComuns.getElementText(textCancelamento);
     }
+
+    //cenario 03 senha
+    public void clicarbtncomocomprar(){
+        acoesComuns.clicar(opcaoComoComprar);
+    }
+    public void clicarcomorecuperarsenha(){
+        acoesComuns.clicar(comoRecuperarSenha);
+    }
+    public String gettextcomocecuperarcenha(){
+        return acoesComuns.getElementText(textComoRecuperarSenha);
+    }
+
+    //cenario 04 Frete Hoje.
+    public void clicarbtnentregas(){
+        acoesComuns.clicar(opcaoEntregas);
+    }
+    public void clicarfretehoje(){
+        acoesComuns.clicar(freteHoje);
+    }
+    public String gettextfretehoje(){
+        return acoesComuns.getElementText(textFreteHoje);
+    }
+
 }
