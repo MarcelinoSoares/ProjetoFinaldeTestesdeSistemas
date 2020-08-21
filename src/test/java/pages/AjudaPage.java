@@ -1,5 +1,6 @@
 package pages;
 
+import manager.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -7,35 +8,29 @@ import Utils.Comum;
 
 public class AjudaPage {
 
-
     private WebDriver driver;
     private WebDriverWait wait;
-    private String pageURL = "https://www.dafiti.com.br/";
     private Comum acoesComuns;
 
-    private By linkatendimento = By.cssSelector(".footer-help  ul  li:nth-child(2)  a");
-    private By atendimentopormensagem = By.cssSelector(".message-modal-content .message-email a");
-    private By topicooutro = By.cssSelector("#topic_other label");
-    private By assuntodamensagem = By.id("topic_other_problem_3");
-    private By nome = By.cssSelector("#name");
-    private By idenficador = By.cssSelector("#taxIdentification");
-    private By email = By.cssSelector("#email");
-    private By telefone = By.cssSelector("#phone1");
-    private By numerodopedido = By.cssSelector("#orderNumber");
-    private By mensagem = By.cssSelector("#message");
+    private By linkAtendimento = By.cssSelector(".footer-help  ul  li:nth-child(2)  a");
+    private By atendimentoPorMensagem = By.cssSelector(".message-modal-content .message-email a");
+    private By topicoOutro = By.xpath("//label[contains(text(),'OUTROS')]");
+    private By assuntoDaMensagem = By.xpath("//div [@class=\"mainContent-problems-options topic_other\"]");
+    private By radioOutros = By.cssSelector("#topic_other_problem_3");
+
     private By btnEnviar = By.cssSelector("#form-faq-contact  .col-xs-6:last-child .btn-primary");
     private By title = By.cssSelector(".emailSent-message .emailSent-title");
     private By subtitle = By.cssSelector(".emailSent-message .emailSent-subtitle");
-    //cenario02
+
     private By duvidaFrequentes = By.cssSelector(".footer-help ul li:nth-child(1) a");
     private By opcaoCancelamento = By.cssSelector("#ajax-cancelamentos > a");
     private By comoCancelar = By.cssSelector("#item-selected-103-1 > div > h2");
     private By textCancelamento = By.cssSelector("#item-selected-103-1 > div > div > p");
-    //cenario03
+
     private By opcaoComoComprar = By.cssSelector("#ajax-como-comprar > a");
     private By comoRecuperarSenha = By.cssSelector("#item-selected-100-1 > div > h2");
     private By textComoRecuperarSenha = By.cssSelector("#item-selected-100-1 > div > div > p");
-    //cenario04
+
     private By opcaoEntregas = By.cssSelector("#ajax-pedidos > a");
     private By freteHoje = By.cssSelector("#item-selected-104-7 > div > h2");
     private By textFreteHoje = By.cssSelector("#item-selected-104-7 > div > div > p");
@@ -43,85 +38,65 @@ public class AjudaPage {
     public AjudaPage(WebDriver driver){
         this.driver = driver;
         acoesComuns = new Comum(driver);
+        wait = DriverManager.getDriverWait();
     }
 
-    public void irParaURL(){
-        acoesComuns.irParaURL(pageURL);
+    public void clicarLinkAtendimento(){
+        acoesComuns.clicar(linkAtendimento);
+    }
+    public void clicarAtendimentoPorMensagem(){
+        acoesComuns.clicar(atendimentoPorMensagem);
+    }
+    public void clicarTopicoOutro(){
+        acoesComuns.clicar(topicoOutro);
     }
 
-    public void clicarlinkatendimento(){
-        acoesComuns.clicar(linkatendimento);
+    public void clicarAssuntoDaMensagem(){
+        acoesComuns.clicar(assuntoDaMensagem);
+        acoesComuns.clicar(radioOutros);
     }
-    public void clicaratendimentopormensagem(){
-        acoesComuns.clicar(atendimentopormensagem);
-    }
-    public void clicartopicooutro(){
-        acoesComuns.clicar(topicooutro);
-    }
-    public void clicarassuntodamensagem(){
-        acoesComuns.clicar(assuntodamensagem);
-    }
-    public void sendkeynome(){
-        acoesComuns.sendKeys( nome, "bruno baima");
-    }
-    public void sendkeyidenficador(){
-        acoesComuns.sendKeys( idenficador, "12345678900");
-    }
-    public void sendkeyemail(){
-        acoesComuns.sendKeys( email, "bbna@cesar.school");
-    }
-    public void sendkeytelefone(){
-        acoesComuns.sendKeys( telefone, "81999366619");
-    }
-    public void sendkeynumerodopedido(){
-        acoesComuns.sendKeys( numerodopedido, "987654321");
-    }
-    public void sendkeymensagem(){
-        acoesComuns.sendKeys( mensagem, "teste 1");
-    }
-    public void clicarbtnEnviar(){
+
+
+    public void clicarBtnEnviar(){
         acoesComuns.clicar(btnEnviar);
     }
-    public String gettitle(){
+    public String getTitle(){
         return acoesComuns.getElementText(title);
     }
-    public String getsubtitle(){
+    public String getSubtitle(){
         return acoesComuns.getElementText(subtitle);
     }
-    //cenario 02 cancelamento
-    public void clicarlinkfaq() {
+
+    public void clicarLinkFaq() {
         acoesComuns.clicar(duvidaFrequentes);
     }
-
-    public void clicarbtncancelamento(){
+    public void clicarBtnCancelamento(){
         acoesComuns.clicar(opcaoCancelamento);
     }
-    public void comocancelacompra(){
+    public void clicarComoCancelaCompra(){
         acoesComuns.clicar(comoCancelar);
     }
-    public String gettextcancelamento(){
+    public String getTextCancelamento(){
         return acoesComuns.getElementText(textCancelamento);
     }
 
-    //cenario 03 senha
-    public void clicarbtncomocomprar(){
+    public void clicarBtnComoComprar(){
         acoesComuns.clicar(opcaoComoComprar);
     }
-    public void clicarcomorecuperarsenha(){
+    public void clicarComoRecuperarSenha(){
         acoesComuns.clicar(comoRecuperarSenha);
     }
-    public String gettextcomocecuperarcenha(){
+    public String getTextComoRecuperarSenha(){
         return acoesComuns.getElementText(textComoRecuperarSenha);
     }
 
-    //cenario 04 Frete Hoje.
-    public void clicarbtnentregas(){
+    public void clicarBtnEntregas(){
         acoesComuns.clicar(opcaoEntregas);
     }
-    public void clicarfretehoje(){
+    public void clicarFreteHoje(){
         acoesComuns.clicar(freteHoje);
     }
-    public String gettextfretehoje(){
+    public String getTextFreteHoje(){
         return acoesComuns.getElementText(textFreteHoje);
     }
 
