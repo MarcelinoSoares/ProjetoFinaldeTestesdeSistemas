@@ -1,2 +1,98 @@
-/.idea
-/target
+
+# Criado por .ignore plugin de suporte (hsz.mobi)
+### Modelo Java
+Alvo/
+
+# Arquivo de classe compilado
+*.class
+
+# Arquivo de registro
+*.log
+
+# Arquivos BlueJ
+*.ctxt
+
+# Ferramentas móveis para Java (J2ME)
+.mtj.tmp/
+
+# Arquivos de pacote #
+*.jar
+*.guerra
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# registros de travamentos de máquinas virtuais, veja http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+### Modelo JetBrains
+# Capas JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm e Rider
+# Referência: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# Coisas específicas do usuário
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/use.statistics.xml
+.idea/**/dicionários
+.ideia/**/prateleira
+
+# Arquivos gerados
+.idea/**/contentModel.xml
+
+# Arquivos sensíveis ou de alta rota
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# Gradle
+.idea/**/gradle.xml
+.idea/**/bibliotecas
+
+# Gradle e Maven com importação automática
+# Ao usar Gradle ou Maven com importação automática, você deve excluir arquivos de módulo,
+# uma vez que eles serão recriados, e podem causar agitação. Nãocomment se usar
+# auto-importação.
+# .idea/artefatos
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/módulos.xml
+# .idea/*.iml
+# .idea/módulos
+# *.iml
+# *.ipr
+
+# Cmake
+cmake-build-*/
+
+# Plugin Mongo Explorer
+.idea/**/mongoSettings.xml
+
+# Formato de projeto baseado em arquivos
+*.iws
+
+# Intellij
+fora/
+
+# plugin mpeltonen/sbt-idea
+.idea_modules/
+
+# Plugin JIRA
+atlassian-ide-plugin.xml
+
+# Plugin Clojure cursivo
+.idea/replstate.xml
+
+# Plugin crashlytics (para Android Studio e IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.propriedades
+crashlytics-build.properties
+fabric.properties
+
+# Cliente de descanso baseado em editor
+.idea/httpRequests 
