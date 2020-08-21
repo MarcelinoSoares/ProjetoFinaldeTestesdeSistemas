@@ -17,7 +17,12 @@ public class AjudaPage {
     private By topicoOutro = By.xpath("//label[contains(text(),'OUTROS')]");
     private By assuntoDaMensagem = By.xpath("//div [@class=\"mainContent-problems-options topic_other\"]");
     private By radioOutros = By.cssSelector("#topic_other_problem_3");
-
+    private By nome = By.cssSelector("#name");
+    private By idenficador = By.cssSelector("#taxIdentification");
+    private By email = By.cssSelector("#email");
+    private By telefone = By.cssSelector("#phone1");
+    private By numeroDoPedido = By.cssSelector("#orderNumber");
+    private By mensagem = By.cssSelector("#message");
     private By btnEnviar = By.cssSelector("#form-faq-contact  .col-xs-6:last-child .btn-primary");
     private By title = By.cssSelector(".emailSent-message .emailSent-title");
     private By subtitle = By.cssSelector(".emailSent-message .emailSent-subtitle");
@@ -55,7 +60,6 @@ public class AjudaPage {
         acoesComuns.clicar(assuntoDaMensagem);
         acoesComuns.clicar(radioOutros);
     }
-
 
     public void clicarBtnEnviar(){
         acoesComuns.clicar(btnEnviar);

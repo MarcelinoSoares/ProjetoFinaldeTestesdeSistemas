@@ -16,42 +16,42 @@ public class Ganhe20 {
     private MainPage mainPage = new MainPage(driver);
 
     @Dado("que um usuário está na página inicial")
-    public void acessHome() {
+    public void acessarAPáginaInicial() {
         mainPage.accessPage();
     }
 
     @Quando("preenche o email para ganhar o cupom ganheVinte feminino {string}")
-    public void emailCupomGanheFeminino(String email) {
+    public void preencherOEmailParaGanharOCupomGanheFeminino(String email) {
         pageGanhe20.setEmail(email);
         pageGanhe20.clicarBtnSexFem();
     }
 
     @Então("recebe a mensagem ‘Cadastro realizado com sucesso!'")
-    public void msgCadComSucesso() {
+    public void receberAMensagemCadastroRealizadoComSucesso() {
         String mensagemAtualsucess = pageGanhe20.getMsgSucess();
         Assert.assertEquals("O cadastro não foi realizado com sucesso", "Cadastro efetuado com sucesso!", mensagemAtualsucess);
     }
 
     @Quando("preenche o email para ganhar o cupom ganheVinte masculino {string}")
-    public void emailCupomGanheMasculino(String email) {
+    public void preencherOEmailParaGanharOCupomGanheMasculino(String email) {
         pageGanhe20.setEmail(email);
         pageGanhe20.clicarBtnSexMas();
     }
 
     @Então("o site exibe a mensagem ‘Insira um e-mail válido’")
-    public void msgEMailVálido() {
+    public void exibirAMensagemInsiraUmEMailVálido() {
         String mensagemAtual = pageGanhe20.getMsgInval();
         Assert.assertEquals("O email não foi validado com sucesso", "Insira um e-mail válido", mensagemAtual);
     }
 
     @Quando("insere um email que já foi utilizado para receber cupom ganheVinte {string}")
-    public void emailJaUtilizado(String email) {
+    public void inserirUmEmailQueJáFoiUtilizadoParaReceberCupomGanhe(String email) {
         pageGanhe20.setEmail(email);
         pageGanhe20.clicarBtnSexFem();
     }
 
     @Então("o site exibe a mensagem ‘Este e-mail já está cadastrado’")
-    public void emailJaCadastrado() {
+    public void exibirAMensagemEsteEMailJáEstáCadastrado() {
         String mensagemAtualJaCadastrada = pageGanhe20.getMsgEmailJaCadastrado();
         Assert.assertEquals("O email não está cadastrado" , "Este e-mail já está cadastrado", mensagemAtualJaCadastrada);
     }
