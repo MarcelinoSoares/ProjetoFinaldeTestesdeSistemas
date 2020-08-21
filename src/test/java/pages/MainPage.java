@@ -1,23 +1,26 @@
 package pages;
 
+import Utils.Comum;
+import Utils.Constantes;
 import manager.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainPage {
 
-
     private WebDriver driver;
     private WebDriverWait wait;
-    private String pageURL = "https://www.dafiti.com.br/";
+    private Comum acoesComuns;
 
-    public MainPage(WebDriver driver){
+    public MainPage (WebDriver driver) {
         this.driver = driver;
-        this.wait = DriverManager.getDriverWait();
+        acoesComuns = new Comum(driver);
+        wait = DriverManager.getDriverWait();
     }
 
-    public MainPage accessPage(){
-        driver.get(pageURL);
+    public MainPage accessPage() {
+        driver.get(Constantes.DAFITI_MAIN_URL);
         return this;
     }
+
 }
